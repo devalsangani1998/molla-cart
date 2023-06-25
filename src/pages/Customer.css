@@ -1,0 +1,49 @@
+.title{
+    font-size: 1.5rem;
+    color: black;
+    letter-spacing: .1rem;
+    font-weight: 400;
+}
+.container .testimonial{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+    font-size: 1.6rem;
+    line-height: 1;
+    color: #fff;
+    border: 0.7rem solid #f9f9f9 !important;
+    background-color: #c66;
+}
+.text-center{
+    text-align: center !important;
+}
+.css-16ph7t8 {
+    animation-duration: 1000ms;
+    animation-timing-function: ease;
+    animation-delay: 200ms;
+    animation-name: animation-1ujkkqi;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+}
+
+
+.owl-carousel.owl-loaded {
+    display: block;
+}
+.owl-carousel {
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+    z-index: 1;
+}
+
+
+.owl-carousel .owl-stage-outer {
+    position: relative;
+    overflow: hidden;
+   
+}

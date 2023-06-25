@@ -1,0 +1,104 @@
+.img{
+    height:380px;
+    width: 100%;
+object-fit: cover;
+
+}
+.conatiner-fluid{
+    position: relative;
+    width: 100%;
+}
+.add-btn {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #f3f6f7;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    line-height: .9;
+  }
+  .card:hover .add-btn {
+    height: 8%;
+    width: 100%;
+    background-color: black;
+    color: #f3f6f7;
+  }
+  .card:hover .wishlist {
+    opacity: 1;
+    transition: .7s ease-in;
+  }
+.like:hover .right  {
+    opacity: 1;
+    background-color:#cc6666 ;
+    
+height: 25px;
+  
+    text-align: center;
+    transition: .5s ease-in;
+  }
+  .like:hover .quick{
+    opacity: 1;
+    background-color: #cc6666;
+    transition: .5s ease-in;
+    color: #f3f6f7;
+  }
+.quick{
+  font-size: 15px;
+  border: 2px solid #cc6666;
+  color: #f3f6f7;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  right: 5px;
+  text-align: center;
+  background-color: #cc6666;
+  opacity: 0;
+}
+
+  .title{
+    padding-top: 50px;
+  }
+  .product{
+    background-color: rgb(243, 246, 247);
+  }
+ .add-btn:hover{
+background-color: #cc6666 !important;
+color: #f3f6f7;
+  }
+.right p{
+  font-size: 15px;
+}
+.wishlist{
+  font-size: 13px;
+  border: 2px solid #cc6666;
+  position: absolute;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  right: 5px;
+  text-align: center;
+  background-color: #cc6666;
+  color: #f3f6f7;
+  opacity: 0;
+  
+}
+.right{
+  right: 20px;
+  padding-right: 10px;
+  opacity: 0;
+  border: 2px solid #cc6666;
+border-top-left-radius: 30px;
+border-bottom-left-radius: 30px;
+ right: 5px;
+  background-color: rgb(13, 13, 13);
+  color: #f3f6f7;
+  opacity: 0;
+  padding-left: 0;
+}
+.like{
+  justify-content: flex-start;
+  column-gap:100px;
+}

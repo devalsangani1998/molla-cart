@@ -1,38 +1,146 @@
-.App {
-  text-align: center;
+body{
+    font: normal 300 1.0rem/1.86 Poppins,sans-serif;
+    box-sizing: border-box;
+}
+.icon-box{
+    display: flex;
+}
+.icon-box-side .icon-box-icon{
+    color: #333;
+    font-size: 3.4rem;
+}
+.icon-box-side .icon-box-title{
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.6rem;
+    letter-spacing: .1rem;
+    color: #333;
+}
+p{
+    font-size: 1.4rem;
+    font-weight: 300;
+    letter-spacing: 0;
+    color: #777;
+    margin-top: 0;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px
+}
+.icon-box-content p:last-child{
+    margin-bottom: 0;
+}
+.icon-box{
+    line-height: 1.5;
+}
+.icon-box-content{
+    margin-left: 20px;
+}
+.btn-underline{
+    padding: 15px 15px 14px;
+}
+.icon-boxes-container{
+    padding-top: .5rem;
+    padding-bottom: 2.8rem;
+    margin-bottom: 0;
+}
+/* .row{
+    margin-left: -10px;
+    margin-right: -10px;
+    display: flex;
+    flex-wrap: wrap;
+} */
+.icon-box-side{
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    
+
+}
+ a :hover{
+    color: #cc6666;
+}
+.cart-dropdown .dropdown-toggle{
+display:inline-block;
+margin-top: -3px;
+font-size: 2rem;
+line-height: 1;
+color: #333;
+position: relative;
+    display: flex;
+    align-items: center;
+    text-decoration: none!important;
+}
+i{
+    font-style: italic;
+}
+.cart-dropdown .cart-count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1;
+    margin-left: 0.2rem;
+    margin-top: 0.1rem;
+    color: #fff;
+    z-index: 1;
+    background-color: #c66;
+}
+.cart{
+    font-size: 30px;
+    display: flex;
+    color: #333;
+    text-decoration: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a{
+    text-decoration: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.cart-dropdown {
+    padding-left: 2.3rem;
+    display: flex;
+    align-self: stretch;
+    align-items: center;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.dropdown{
+    position: relative;
 }
-
-.App-link {
-  color: #61dafb;
+.heading.heading-center {
+    text-align: center;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+ul li a {
+    
+    text-decoration: none;
+}
+ul li {
+    list-style-type: none;
+}
+.bg-second{
+    background-color: #f9f9f9!important;
+}
+li a:hover{
+    color: #cc6666;
+}
+a:hover{
+color: #cc6666;
+}
+.right{
+    float: right;
+    padding-left: 100px;
+}
+.left{
+    padding-left: 100px;
+}
+.nav{
+    text-decoration: none;
+    color: #333;
+}
+.nav:hover{
+    color: #cc6666;
 }

@@ -1,0 +1,63 @@
+p{
+    font-size: 1.3rem;
+}
+.widget-about-title{
+    color: #fff;
+}
+.widget-about-info a{
+    color: #c66;
+}
+.widget-about-info {
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: -.01em;
+    line-height: 1.3;
+}
+.col-sm-6, .col-md-8{
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.widget-title{
+
+    color: white;
+}
+ul li a {
+    color: #777;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+}
+.widget-newsletter form .btn {
+    background-color: #fff;
+    color: #333;
+    border: none;
+}
+.input-group>.input-group-append>.btn{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.widget-newsletter form .btn {
+    
+    color: #333;
+    
+}
+.input-group-append {
+    margin-left: -1px;
+    display: flex;
+}
+.input-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+}
+.last a{
+    font-size: 20px;
+    text-decoration: none;
+}
+.last:hover a{
+    color: #c66;
+}

@@ -1,0 +1,33 @@
+.btn:hover{
+    background-color: #cc6666 !important;
+    color: white;
+    border-radius: 0;
+}
+.banner-content{
+    text-align: center;
+}
+.btn.underline{
+    border-bottom: 1px solid;
+}
+.accessories{
+    text-decoration: none;
+    color: white;
+}
+.accessories:hover{
+    color:#dc3545;
+}
+.card:hover{
+    filter: brightness(87%);
+    transition: ease-out;
+    .banner-content{
+        filter: brightness(100%);
+    }
+}
+
+.coantainer-fluid{
+    margin-top: 100px !important;
+}
+.card{
+    filter: brightness(100%);
+}
+
