@@ -147,6 +147,7 @@ const Footer = () => {
   </div>
   </div>
     </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur sint dolor amet consequuntur repellat placeat unde ratione quo voluptatem voluptate! Ab enim vero minus reiciendis hic minima, nesciunt doloribus vel!</p>
     </>
   )
 }
