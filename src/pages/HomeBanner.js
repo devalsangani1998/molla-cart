@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 const HomeBanner = () => {
     return (
-        <div className='container-fluid mt-5'>
+        <div className='container-fluid mt-5 home-banner'>
             <div className="row justify-content-center">
                 < div className="col-lg-6 mt-1 container">
                     <div className="card text-white">
