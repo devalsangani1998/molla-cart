@@ -16,17 +16,17 @@
 .accessories:hover{
     color:#dc3545;
 }
-.card:hover{
+.home-img:hover{
     filter: brightness(87%);
-    transition: ease-out;
+    transition: .4s ease-in-out;
     .banner-content{
         filter: brightness(100%);
     }
 }
 
-.coantainer-fluid{
+/* .coantainer-fluid{
     margin-top: 100px !important;
-}
+} */
 .card{
     filter: brightness(100%);
 }

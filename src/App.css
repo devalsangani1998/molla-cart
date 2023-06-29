@@ -20,7 +20,7 @@ p{
     font-size: 1.4rem;
     font-weight: 300;
     letter-spacing: 0;
-    color: #777;
+    color: #605f5f;
     margin-top: 0;
     display: block;
     margin-block-start: 1em;
@@ -62,7 +62,7 @@ p{
  a :hover{
     color: #cc6666;
 }
-.cart-dropdown .dropdown-toggle{
+/* .cart-dropdown .dropdown-toggle{
 display:inline-block;
 margin-top: -3px;
 font-size: 2rem;
@@ -72,7 +72,7 @@ position: relative;
     display: flex;
     align-items: center;
     text-decoration: none!important;
-}
+} */
 i{
     font-style: italic;
 }
@@ -94,7 +94,7 @@ i{
 }
 .cart{
     font-size: 30px;
-    display: flex;
+    /* display: flex; */
     color: #333;
     text-decoration: none;
 }
@@ -103,7 +103,6 @@ a{
     text-decoration: none;
 }
 .cart-dropdown {
-    padding-left: 2.3rem;
     display: flex;
     align-self: stretch;
     align-items: center;

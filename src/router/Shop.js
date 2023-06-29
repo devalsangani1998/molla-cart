@@ -21,7 +21,7 @@ const Shop = () => {
         <ul className='d-flex justify-content-center gap-5 pt-3 pb-3'>
 
           <li>
-            <Link className='text-dark display-6' to="/product">Womens Clothing</Link>
+            <Link className='text-dark display-3' to="/product">Womens Clothing</Link>
           </li>
 
           <li>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { addToCart } from '../redux/CartSlice'
 import './Product.css'
@@ -13,7 +13,14 @@ const Product = () => {
 
   function add(val) {
     dispatch(addToCart(val))
+    alert("item added")
   }
+
+  // const [showPopup, setShowPopup] = useState(false)
+  // const handleAddToCart = () => {
+  //   setShowPopup(true);
+  //   // Additional logic for adding the item to the cart can be added here
+  // };
 
   return (
     <div className="container-fluid bg-second mt-3 mb-3 product">
@@ -22,11 +29,11 @@ const Product = () => {
         <ul className='d-flex justify-content-center gap-5 pt-3 pb-3'>
 
           <li>
-            <a className='text-dark display-6' href="text">Womens Clothing</a>
+            <a className='text-dark' style={{fontSize:'30px'}} href="text">Womens Clothing</a>
           </li>
 
           <li>
-            <a className='text-dark display-6' href="text">Mens Clothing</a>
+            <a className='text-dark' style={{fontSize:'30px'}} href="text">Mens Clothing</a>
           </li>
         </ul>
       </div>

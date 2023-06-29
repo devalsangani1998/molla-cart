@@ -1,0 +1,139 @@
+
+.shop-detail{
+    font-size: 15px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.z-1{
+    position: relative;
+    z-index: 1;
+}
+.remove-btn{
+    padding: 6px !important;
+    border-radius: 5px;
+    line-height: 0px;
+    background-color: #cc6666 !important;
+    color: white;
+    border-color: #cc6666;
+    border: 0;
+}
+.cart-banner{
+    background-image: url("./../components/assets/cart-bg.jpg");
+}
+
+@media screen and (min-width: 992px){
+.summary {
+    margin-top: 0;
+}
+}
+.summary {
+    padding: 2.5rem 1rem 3rem;
+    border: 0.1rem dashed #d7d7d7;
+    background-color: #f9f9f9;
+    border-radius: 0.3rem;
+}
+.summary-title{
+    font-size: 1rem;
+    letter-spacing: 0;
+    padding-bottom: 1.7rem;
+    border-bottom: 0.1rem solid #ccc;
+}
+.table.table-summary .summary-shipping-estimate a {
+    margin-top: 0.6rem;
+    display: inline-block;
+    font-weight: 300;
+    color: #999;
+    font-size: 1rem;
+    border-bottom: 0.1rem solid #999;
+}
+a{
+    text-decoration: none;
+}
+.btn-outline-dark-2 {
+    background-image: none;
+    border-color: #ebebeb;
+    box-shadow: none;
+}
+.summary.summary-cart {
+    margin-bottom: 3rem;
+}
+.table.table-summary {
+    line-height: 1.86;
+    color: #666;
+    border: none;
+    margin-bottom: 0;
+}
+.table{
+    width: 100%;
+}
+table{
+    border-collapse: collapse;
+}
+.table.table-summary .summary-subtotal td{
+    color: #333;
+    font-weight: 400;
+    font-size: 1rem;
+}
+.table.table-summary .summary-shipping {
+    color: #333;
+    font-weight: 400;
+    font-size: 1rem;
+}
+.table.table-summary .summary-shipping td {
+    padding-top: 2rem;
+    padding-bottom: 1.3rem;
+    height: auto;
+    border-bottom: none;
+}
+.table.table-summary tbody td {
+    padding: 0;
+}
+.custom-control {
+    position: relative;
+    
+}
+.custom-control-label{
+    font-size: 1rem;
+    padding-left: 1rem;
+}
+.adress{
+    text-decoration: none;
+}
+.summary-shipping-row{
+    font-size: 1rem;
+}
+.estimate{
+    font-size: 1rem;
+}
+.summary-cart .table.table-summary tbody td:last-child {
+    min-width: 0;
+}
+.summary-total{
+    font-size: 1.6rem;
+}
+.table-summary td{
+    border:none!important;
+}
+.table.table-summary .summary-total td{
+    color: #cc6666;
+}
+.btn-outline-primary-2 {
+    color: #c66;
+    background-color: transparent;
+    background-image: none;
+    border-color: #c66;
+    box-shadow: none;
+}
+
+.refresh-icon:hover{
+color: white;
+}
+.cont-ship:hover{
+    background-color: #cc6666;
+    color: #fdfcfc;
+}
+.proceed-check:hover{
+    background-color: #cc6666;
+    color: #fdfcfc;
+}

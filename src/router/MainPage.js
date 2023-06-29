@@ -6,6 +6,8 @@ import Product from '../components/Product'
 import Blog from '../components/Blog'
 import Header from './Header'
 import Cart from './Cart'
+import Contact from '../components/Contact'
+import About from '../pages/About'
 
 const MainPage = () => {
   return (
@@ -18,6 +20,8 @@ const MainPage = () => {
             {/* <Route path='/shop' element={<Shop/>} /> */}
             <Route path='/product' element={<Product/>} />
             <Route path='/blog' element={<Blog/>} />
+            <Route path='/contact' element={<Contact/>} />
+            <Route path='/about' element={<About/>} />
             <Route path='/cart' element = {<Cart/>} />
         </Routes>
         </BrowserRouter>

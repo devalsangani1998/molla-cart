@@ -10,7 +10,9 @@ import { Link } from 'react-router-dom';
 
 function Header() {
   return (
-    <Navbar bg="light" expand="lg" className='fixed-top' >
+    <>
+   
+    <Navbar bg="white" expand="lg" className='sticky-top shadow-sm py-3' >
       <Container fluid>
         <Navbar.Brand to="#"><img src={require('./../components/assets/logo.png')} alt="" /></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -21,21 +23,21 @@ function Header() {
             navbarFixed
           >
             <Nav.Link to="/home">
-              <Link className='nav' to='/home'>Home</Link></Nav.Link>
+              <Link className='nav px-3' to='/home'>HOME</Link></Nav.Link>
             {/* <Nav.Link to="/shop"> */}
               {/* <Link className='nav' to = '/shop'>Shop </Link> </Nav.Link> */}
 
             <Nav.Link to="/product">
-             <Link className='nav' to = '/product'> Product </Link>
+             <Link className='nav px-3' to = '/product'> PRODUCT </Link>
             </Nav.Link>
             <Nav.Link to="/pages">
-             <Link className='nav' to = 'pages'> Pages </Link>
+             <Link className='nav px-3' to = '/about'> ABOUT </Link>
             </Nav.Link>
             <Nav.Link to="/blog">
-            <Link className='nav' to = 'blog'>  Blog </Link>
+            <Link className='nav px-3' to = '/blog'>  BLOG </Link>
             </Nav.Link>
             <Nav.Link to="/element">
-             <Link className='nav' to='element'>Elements</Link> 
+             <Link className='nav px-3' to='/contact'>CONTACT US</Link> 
             </Nav.Link>
           </Nav>
           <Form className="d-flex">
@@ -46,21 +48,23 @@ function Header() {
               className="me-2"
               aria-label="Search"
             />
-            <Button variant='0'>Search</Button>
+            <Button variant='0' className='me-4'>Search</Button>
           </Form>
           <div className="header-right">
-            <div class="header-search header-search-extended header-search-visible header-search-no-radius d-xl-block">
-              <div className="dropdown cart-dropdown">
-                <Link className='cart' to="/cart">
-                  <BsCart2 />
-                  <span className='cart-count'>0</span>
-                </Link>
-              </div>
-            </div>
-          </div>
+      <div class="header-search header-search-extended header-search-visible header-search-no-radius d-xl-block">
+        <div className="dropdown cart-dropdown">
+          <Link className='cart' to="/cart">
+            <BsCart2 />
+          </Link>
+        </div>
+      </div>
+    </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>
+   
+    
+    </>
   );
 }
 
