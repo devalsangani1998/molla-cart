@@ -13,7 +13,6 @@ const Product = () => {
 
   function add(val) {
     dispatch(addToCart(val))
-    alert("item added")
   }
 
   // const [showPopup, setShowPopup] = useState(false)

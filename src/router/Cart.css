@@ -105,6 +105,8 @@ table{
 }
 .estimate{
     font-size: 1rem;
+    color: #333;
+    font-weight: 500;
 }
 .summary-cart .table.table-summary tbody td:last-child {
     min-width: 0;

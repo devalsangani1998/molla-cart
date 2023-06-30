@@ -6,6 +6,8 @@ import { MdDelete } from 'react-icons/md';
 import { HiOutlineRefresh } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
 
+
+
 const Cart = () => {
 
     const dispatch = useDispatch()
@@ -16,10 +18,12 @@ const Cart = () => {
         dispatch(removeCart(val))
     }
 
+
     return (
         <>
+       
             <section className='cart-banner'>
-                <img src={require("./../components/assets/cart-bg.jpg")} style={{ width: "100%" }} alt="" />
+                <img src={require("./../components/assets/cart-bg.jpg")} style={{ width: "100%" , height:"30vh"}} alt="" />
                 <div className="card-img-overlay py-5">
                     <h1 className='pt-5 text-dark' style={{ textAlign: "center" }}>Shopping Cart</h1>
                     <h4 style={{ textAlign: "center", color: "#c66" }}>Shop</h4>
@@ -69,7 +73,9 @@ const Cart = () => {
                                                             <p>${item.price * item.quantity}</p>
                                                         </td>
                                                         <td>
-                                                            <button className='remove-btn' onClick={() => remove(item)}><MdDelete style={{ fontSize: "30px" }} /></button>
+                                                            <button className='remove-btn' onClick={() => remove(item)}>
+                                                                    <MdDelete style={{ fontSize: "30px" }} />
+                                                                </button>
                                                         </td>
 
                                                     </tr>
@@ -96,8 +102,8 @@ const Cart = () => {
                                                 <tr className='summary-shipping-row'>
                                                     <td>
                                                         <div className="custom-control custom-radio">
-                                                            <input type="radio" id='free-shipping' name='cart' className='custom-control-input' value='free-shipping' checked />
-                                                            <label htmlFor="free-shipping" className='custom-control-label'>
+                                                            <input type="radio" name='cart' className='custom-control-input' value='free-shipping' />
+                                                            <label  className='custom-control-label'>
                                                                 Free Shipping
                                                             </label>
                                                         </div>
@@ -108,7 +114,7 @@ const Cart = () => {
                                                 <tr className='summary-shipping-row'>
                                                     <td>
                                                         <div className="custom-control custom-radio">
-                                                            <input type="radio" id='standard-shipping' name='cart' className='custom-control-input' value='standard-shipping' />
+                                                            <input type="radio" name='cart' className='custom-control-input' value='standard-shipping' />
                                                             <label htmlFor="standard-shipping" className='custom-control-label'>
                                                                 Standard:
                                                             </label>
@@ -119,7 +125,7 @@ const Cart = () => {
                                                 <tr className='summary-shipping-row'>
                                                     <td>
                                                         <div className='custom-control custom-radio'>
-                                                            <input type="radio" id='express-shipping' name='cart' className='custom-control-input' value='express-shipping' />
+                                                            <input type="radio" name='cart' className='custom-control-input' value='express-shipping' />
                                                             <label htmlFor="express-shipping" className='custom-control-label'>
                                                                 Express:
                                                             </label>
@@ -130,7 +136,7 @@ const Cart = () => {
                                                 <tr className='summary-shipping-estimate'>
                                                     <td className='estimate'>
                                                         Estimate For Your Country <br />
-                                                        <a href="" className='adress'>Change adress</a>
+                                                        <a href="adress" className='adress'>Change adress</a>
                                                     </td>
                                                 </tr>
                                                 <tr className='summary-total'>
@@ -142,7 +148,7 @@ const Cart = () => {
                                             </tbody>
                                         </table>
                                         <div className='proceed-check'>
-                                        <a href="" className='btn btn-outline-primary-2 btn-border btn-block d-flex'>PROCEED TO CHECKOUT</a>
+                                        <a href="proceed" className='btn btn-outline-primary-2 btn-border btn-block d-flex'>PROCEED TO CHECKOUT</a>
                                         </div>
                                     </div>
                                     <div className='cont-ship'>               
