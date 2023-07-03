@@ -22,7 +22,7 @@ const Cart = () => {
     return (
         <>
        
-            <section className='cart-banner'>
+            <section className='container-fluid cart-banner'>
                 <img src={require("./../components/assets/cart-bg.jpg")} style={{ width: "100%" , height:"30vh"}} alt="" />
                 <div className="card-img-overlay py-5">
                     <h1 className='pt-5 text-dark' style={{ textAlign: "center" }}>Shopping Cart</h1>
@@ -61,20 +61,20 @@ const Cart = () => {
                                                             </div>
 
                                                         </td>
-                                                        <td className='name-col' style={{ fontSize: "30px" }}><p>{item.name}</p></td>
+                                                        <td className='name-col' ><p style={{ fontSize: "1.3vw", color:'black', fontWeight:'350' }}>{item.name}</p></td>
 
                                                         <td className='price-col'>
-                                                            <p>{item.price}</p>
+                                                            <p style={{ fontSize: "1.3vw", color:'black', fontWeight:'350'}}>${item.price}</p>
                                                         </td>
                                                         <td className='quantity-col'>
-                                                            <p>{item.quantity}</p>
+                                                            <p style={{ fontSize: "1.3vw", color:'black', fontWeight:'350' }}>{item.quantity}</p>
                                                         </td>
                                                         <td className='total-col'>
-                                                            <p>${item.price * item.quantity}</p>
+                                                            <p style={{ fontSize: "1.3vw", color:'#cc6666', fontWeight:'350' }}>${item.price * item.quantity}</p>
                                                         </td>
                                                         <td>
                                                             <button className='remove-btn' onClick={() => remove(item)}>
-                                                                    <MdDelete style={{ fontSize: "30px" }} />
+                                                                    <MdDelete style={{ fontSize: "1.7vw" }}/>
                                                                 </button>
                                                         </td>
 

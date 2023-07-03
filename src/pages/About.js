@@ -6,7 +6,7 @@ const About = () => {
   <>
   <div className="container mt-3">
     <div className="page-header page-header-big">
-        <img src={require("./../components/assets/about-us.jpg")} alt="bg-img" />
+        <img src={require("./../components/assets/about-us.jpg")} alt="bg-img" style={{width:'100%'}} />
         <h1 className='text-light'>About Us</h1>
     </div>
   </div>

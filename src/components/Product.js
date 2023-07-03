@@ -15,11 +15,7 @@ const Product = () => {
     dispatch(addToCart(val))
   }
 
-  // const [showPopup, setShowPopup] = useState(false)
-  // const handleAddToCart = () => {
-  //   setShowPopup(true);
-  //   // Additional logic for adding the item to the cart can be added here
-  // };
+
 
   return (
     <div className="container-fluid bg-second mt-3 mb-3 product">
@@ -43,16 +39,16 @@ const Product = () => {
               products.map((item) => {
                 return (
                   <div className='col-6 col-md-4 col-lg-3 col-xl-5col mt-2'>
-                    <div className="card border-0 h-auto">
-                      <div className="product-img">
-                        <img src={item.img} className="card-img-top" alt="..." />
+                    <div className="card border-0 h-auto"  style={{height:'50vh'}}>
+                      <div className="product-img" >
+                        <img src={item.img} className="card-img-top bg-white" alt="..." style={{height:'40vh', width:'100%'}} />
                       </div>
                       <div className=" container card-img-overlay like gap-2 justify-content-between d-flex flex-row-reverse">
                         <div className="wishlist rounded-circle">
                           <FiHeart />
                         </div>
                         <div className="right">
-                          <p className='text-white'>add to wishlist</p>
+                          <a className='text-white' href=''>add to wishlist</a>
                         </div>
                         <div className="quick rounded-circle">
                         <GrOverview />

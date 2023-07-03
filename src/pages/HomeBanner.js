@@ -16,7 +16,7 @@ const HomeBanner = () => {
                         <div className="card-img-overlay mt-5 banner-content pt-5 ">
                             <h5>NEW COLLECTION</h5>
                             <h1>SHOP WOMEN's</h1> 
-                            <button className='btn underline text-white'>DISCOVER NOW</button>
+                            <Link className='btn underline text-white' to='/product'>DISCOVER NOW</Link>
                         </div>
                     </div>
                 </div>
@@ -26,7 +26,7 @@ const HomeBanner = () => {
                         <div className="card-img-overlay mt-5 banner-content pt-5   ">
                             <h5>NEW COLLECTION</h5>
                             <h1>SHOP MEN'S</h1>
-                            <button className='btn underline text-white'>DISCOVER NOW</button>
+                            <Link className='btn underline text-white' to='/product'>DISCOVER NOW</Link>
                         </div>
                     </div>
                 </div>
