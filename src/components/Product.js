@@ -4,6 +4,8 @@ import { addToCart } from '../redux/CartSlice'
 import './Product.css'
 import { FiHeart } from 'react-icons/fi';
 import { GrOverview } from 'react-icons/gr';
+import { Slide, ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Product = () => {
 
@@ -12,8 +14,15 @@ const Product = () => {
   const { products } = useSelector(state => state.products)
 
   function add(val) {
+    toast.success('Add Successfully in to Cart',{
+autoClose:2000,
+theme:'light',
+transition:Slide,
+    })
     dispatch(addToCart(val))
-  }
+  };
+
+
 
 
 
@@ -71,6 +80,7 @@ const Product = () => {
           </div>
         </div>
       </div>
+      <ToastContainer/>
     </div>
   )
 }

@@ -5,6 +5,9 @@ import { removeCart } from '../redux/CartSlice'
 import { MdDelete } from 'react-icons/md';
 import { HiOutlineRefresh } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
+import { Slide, ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useState } from 'react';
 
 
 
@@ -15,15 +18,23 @@ const Cart = () => {
     const { cart, total } = useSelector(state => state.cart)
 
     function remove(val) {
+        toast.success('Remove Item Successfully',{
+            autoClose:2000,
+            theme:'light',
+            transition:Slide,
+                })
         dispatch(removeCart(val))
     }
+
+    const [choice, setChoice] = useState(0);
+    console.log(choice);
 
 
     return (
         <>
-       
+
             <section className='container-fluid cart-banner'>
-                <img src={require("./../components/assets/cart-bg.jpg")} style={{ width: "100%" , height:"30vh"}} alt="" />
+                <img src={require("./../components/assets/cart-bg.jpg")} style={{ width: "100%", height: "30vh" }} alt="" />
                 <div className="card-img-overlay py-5">
                     <h1 className='pt-5 text-dark' style={{ textAlign: "center" }}>Shopping Cart</h1>
                     <h4 style={{ textAlign: "center", color: "#c66" }}>Shop</h4>
@@ -61,27 +72,23 @@ const Cart = () => {
                                                             </div>
 
                                                         </td>
-                                                        <td className='name-col' ><p style={{ fontSize: "1.3vw", color:'black', fontWeight:'350' }}>{item.name}</p></td>
+                                                        <td className='name-col' ><p style={{ fontSize: "1.3vw", color: 'black', fontWeight: '350' }}>{item.name}</p></td>
 
                                                         <td className='price-col'>
-                                                            <p style={{ fontSize: "1.3vw", color:'black', fontWeight:'350'}}>${item.price}</p>
+                                                            <p style={{ fontSize: "1.3vw", color: 'black', fontWeight: '350' }}>${item.price}</p>
                                                         </td>
                                                         <td className='quantity-col'>
-                                                            <p style={{ fontSize: "1.3vw", color:'black', fontWeight:'350' }}>{item.quantity}</p>
+                                                            <p style={{ fontSize: "1.3vw", color: 'black', fontWeight: '350' }}>{item.quantity}</p>
                                                         </td>
                                                         <td className='total-col'>
-                                                            <p style={{ fontSize: "1.3vw", color:'#cc6666', fontWeight:'350' }}>${item.price * item.quantity}</p>
+                                                            <p style={{ fontSize: "1.3vw", color: '#cc6666', fontWeight: '350' }}>${item.price * item.quantity}</p>
                                                         </td>
                                                         <td>
                                                             <button className='remove-btn' onClick={() => remove(item)}>
-                                                                    <MdDelete style={{ fontSize: "1.7vw" }}/>
-                                                                </button>
+                                                                <MdDelete style={{ fontSize: "1.7vw" }} />
+                                                            </button>
                                                         </td>
-
                                                     </tr>
-
-
-
                                                 )
                                             })
                                         }
@@ -103,7 +110,7 @@ const Cart = () => {
                                                     <td>
                                                         <div className="custom-control custom-radio">
                                                             <input type="radio" name='cart' className='custom-control-input' value='free-shipping' />
-                                                            <label  className='custom-control-label'>
+                                                            <label className='custom-control-label'>
                                                                 Free Shipping
                                                             </label>
                                                         </div>
@@ -143,18 +150,18 @@ const Cart = () => {
                                                     <td>
                                                         Total:
                                                     </td>
-                                                    <td>${total}</td>
+                                                    <td>${(total + parseInt(choice)).toFixed(2)}</td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                         <div className='proceed-check'>
-                                        <a href="proceed" className='btn btn-outline-primary-2 btn-border btn-block d-flex'>PROCEED TO CHECKOUT</a>
+                                            <a href="proceed" className='btn btn-outline-primary-2 btn-border btn-block d-flex'>PROCEED TO CHECKOUT</a>
                                         </div>
                                     </div>
-                                    <div className='cont-ship'>               
-                                 <Link to="/product" className='btn btn-outline-dark-2 btn-block mb-3 d-flex gap-2'>CONTINUE SHOPPING
-                                    <HiOutlineRefresh className='refresh-icon'/>
-                                    </Link>
+                                    <div className='cont-ship'>
+                                        <Link to="/product" className='btn btn-outline-dark-2 btn-block mb-3 d-flex gap-2'>CONTINUE SHOPPING
+                                            <HiOutlineRefresh className='refresh-icon' />
+                                        </Link>
                                     </div>
 
                                 </div>
@@ -162,6 +169,7 @@ const Cart = () => {
                         </div>
                     </div>
                 </div>
+                <ToastContainer/>
             </section>
 
         </>
