@@ -18,7 +18,7 @@ const Cart = () => {
     const { cart, total } = useSelector(state => state.cart)
 
     function remove(val) {
-        toast.success('Remove Item Successfully',{
+        toast.success('Product Removed From Cart',{
             autoClose:2000,
             theme:'light',
             transition:Slide,
@@ -26,8 +26,7 @@ const Cart = () => {
         dispatch(removeCart(val))
     }
 
-    const [choice, setChoice] = useState(0);
-    console.log(choice);
+  
 
 
     return (
@@ -150,7 +149,7 @@ const Cart = () => {
                                                     <td>
                                                         Total:
                                                     </td>
-                                                    <td>${(total + parseInt(choice)).toFixed(2)}</td>
+                                                    <td>${total}</td>
                                                 </tr>
                                             </tbody>
                                         </table>

@@ -14,7 +14,7 @@ const Product = () => {
   const { products } = useSelector(state => state.products)
 
   function add(val) {
-    toast.success('Add Successfully in to Cart',{
+    toast.success('Product Added to Cart',{
 autoClose:2000,
 theme:'light',
 transition:Slide,
