@@ -80,7 +80,8 @@ color: #f3f6f7;
   border-radius: 50%;
   width: 25px;
   height: 25px;
-  right: 5px;
+  right: 3px;
+  text-align: center;
  
   background-color: #cc6666;
   color: #f3f6f7;
@@ -88,18 +89,16 @@ color: #f3f6f7;
   
 }
 .right{
-  right: 20px;
-  padding-right: 15px;
+  padding-right: 12px;
   opacity: 0;
   border: 2px solid #cc6666;
 border-top-left-radius: 30px;
 border-bottom-left-radius: 30px;
- right: 5px;
   background-color: rgb(13, 13, 13);
   color: #f3f6f7;
   opacity: 0;
   padding-left: 10px;
-  text-align: center;
+  text-align: center !important;
 }
 .like{
   justify-content: flex-start;
