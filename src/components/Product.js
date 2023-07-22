@@ -27,7 +27,7 @@ transition:Slide,
 
 
   return (
-    <div className="container-fluid bg-second mt-3 mb-3 product">
+    <div className="container-fluid bg-second mb-3 product">
       <div className='heading heading-center mb-3'>
         <h1 className='title'>Featured Products</h1>
         <ul className='d-flex justify-content-center gap-5 pt-3 pb-3'>
@@ -47,10 +47,10 @@ transition:Slide,
             {
               products.map((item) => {
                 return (
-                  <div className='col-6 col-md-4 col-lg-3 col-xl-5col mt-2'>
-                    <div className="card border-0 h-auto"  style={{height:'50vh'}}>
-                      <div className="product-img" >
-                        <img src={item.img} className="card-img-top bg-white" alt="..." style={{height:'40vh', width:'100%'}} />
+                  <div className='col-6 col-md-4 col-lg-3 col-xl-5col mb-4 shadow-md'>
+                    <div className="card border-0" style={{height:'90vh'}}>
+                      <div className="product-img" style={{objectFit:'contain'}} >
+                        <img src={item.img} className="card-img-top bg-white" alt="..." style={{objectFit:'contain',height:'50vh', width:'100%'}} />
                       </div>
                       <div className=" container card-img-overlay like gap-2 justify-content-between d-flex flex-row-reverse">
                         <div className="wishlist rounded-circle">
@@ -64,7 +64,7 @@ transition:Slide,
                       </div>
                       </div>
                       
-                      <div className="overlay" style={{ textAlign: 'center' }}>
+                      <div className="overlay mt-2" style={{ textAlign: 'center' }}>
                         <div className="card-body" style={{ textAlign: "center" }}>
                           <p className="card-title ">{item.category}</p>
                           <a className="card-text text-decoration-none text-dark">{item.name}</a>

@@ -69,7 +69,7 @@ background-color: #cc6666 !important;
 color: #f3f6f7;
   }
 .right a{
-  font-size: 15px;
+  font-size: 12px;
   text-decoration: none;
   text-align: center;
 }
@@ -104,3 +104,4 @@ border-bottom-left-radius: 30px;
   justify-content: flex-start;
   column-gap:100px;
 }
+
