@@ -22,10 +22,6 @@ transition:Slide,
     dispatch(addToCart(val))
   };
 
-
-
-
-
   return (
     <div className="container-fluid bg-second mb-3 product">
       <div className='heading heading-center mb-3'>
@@ -47,23 +43,22 @@ transition:Slide,
             {
               products.map((item) => {
                 return (
-                  <div className='col-6 col-md-4 col-lg-3 col-xl-5col mb-4 shadow-md'>
-                    <div className="card border-0" style={{height:'90vh'}}>
-                      <div className="product-img" style={{objectFit:'contain'}} >
-                        <img src={item.img} className="card-img-top bg-white" alt="..." style={{objectFit:'contain',height:'50vh', width:'100%'}} />
+                  <div className='container-fluid col-12 col-md-4 col-lg-3 col shadow-md mb-4' >
+                    <div className="card border-0" style={{height:'100%',width:'100%'}} >
+                      <div className="product-img"  >
+                        <img src={item.img} className="card-img-top bg-white" alt="..." style={{objectFit:'contain',height:'auto', width:'100%'}} />
                       </div>
-                      <div className=" container card-img-overlay like gap-2 justify-content-between d-flex flex-row-reverse">
+                      <div className="card-img-overlay like gap-2 justify-content-between d-flex flex-row-reverse">
                         <div className="wishlist rounded-circle">
                           <FiHeart />
                         </div>
                         <div className="right">
-                          <a className='text-white' href=''>add to wishlist</a>
+                          <a className='text-white d-flex align-items-center' href=''>add to wishlist</a>
                         </div>
                         <div className="quick rounded-circle">
                         <GrOverview />
                       </div>
                       </div>
-                      
                       <div className="overlay mt-2" style={{ textAlign: 'center' }}>
                         <div className="card-body" style={{ textAlign: "center" }}>
                           <p className="card-title ">{item.category}</p>
