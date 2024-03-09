@@ -22,10 +22,6 @@ transition:Slide,
     dispatch(addToCart(val))
   };
 
-
-
-
-
   return (
     <div className="container-fluid bg-second mb-3 product">
       <div className='heading heading-center mb-3'>
@@ -47,7 +43,7 @@ transition:Slide,
             {
               products.map((item) => {
                 return (
-                  <div className='col-6 col-md-4 col-lg-3 col-xl-5col mb-4 shadow-md'>
+                  <div className='col-md-6 col-lg-3 col-xl-5col col-sm-12 mb-4 shadow-md'>
                     <div className="card border-0" style={{height:'90vh'}}>
                       <div className="product-img" style={{objectFit:'contain'}} >
                         <img src={item.img} className="card-img-top bg-white" alt="..." style={{objectFit:'contain',height:'50vh', width:'100%'}} />
