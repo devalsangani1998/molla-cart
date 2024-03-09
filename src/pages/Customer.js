@@ -5,6 +5,9 @@ import { BsQuote } from 'react-icons/bs';
 const Costumer = () => {
   return (
     <div className="container">
+    
+   
+        
             <h2 className='title text-uppercase text-dark text-center mb-2 pt-5'>Our customer says</h2>
             <div className="css-16ph7t8">
               <div className="owl-carousel owl-theme owl-simple owl-testimonials owl-loaded owl-drag">
@@ -15,7 +18,9 @@ const Costumer = () => {
                 </div>
               </div>
             </div>
+           
         </div>
+  
   )
 }
 

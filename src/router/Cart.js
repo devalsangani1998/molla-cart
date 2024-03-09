@@ -7,7 +7,9 @@ import { HiOutlineRefresh } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
 import { Slide, ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Table } from 'react-bootstrap';
+import { useState } from 'react';
+
+
 
 const Cart = () => {
 
@@ -16,16 +18,20 @@ const Cart = () => {
     const { cart, total } = useSelector(state => state.cart)
 
     function remove(val) {
-        toast.error('Product Removed From Cart',{
+        toast.success('Product Removed From Cart',{
             autoClose:2000,
             theme:'light',
             transition:Slide,
                 })
         dispatch(removeCart(val))
     }
+
+  
+
+
     return (
         <>
-        
+
             <section className='container-fluid cart-banner'>
                 <img src={require("./../components/assets/cart-bg.jpg")} style={{ width: "100%", height: "30vh" }} alt="" />
                 <div className="card-img-overlay py-5">
@@ -51,6 +57,9 @@ const Cart = () => {
                                             </tr>
                                         </thead>
 
+
+                                        {/* <h1 className='mt-3 mb-4 total-count' style={{ color: "#cc6666" }}>Total : ${total}</h1> */}
+
                                         {
                                             cart.map((item) => {
                                                 return (
@@ -58,9 +67,12 @@ const Cart = () => {
                                                         <td className='product-col d-flex gap-3 align-items-center' style={{ textAlign: "center" }}>
                                                             <div className="product d-flex">
                                                                 <img src={item.img} alt="" style={{ width: "80px", height: "80px" }} />
+
                                                             </div>
+
                                                         </td>
                                                         <td className='name-col' ><p style={{ fontSize: "1.3vw", color: 'black', fontWeight: '350' }}>{item.name}</p></td>
+
                                                         <td className='price-col'>
                                                             <p style={{ fontSize: "1.3vw", color: 'black', fontWeight: '350' }}>${item.price}</p>
                                                         </td>
