@@ -11,44 +11,7 @@ const loadCartFromLocalStorage = () => {
   return cartData ? JSON.parse(cartData) : initialState;
 };
 
-// export const GetProducts = createAsyncThunk(
-//   "Cart/GetProducts",
-//   async () => {
-//     try {
-//       const response = await axios.get('https://dummyjson.com/products')
-//       return response.data
-//     } catch (error) {
-//       console.log(error)
-//       throw error
-//     }
-//   }
-// )
-
 const CartSlice = createSlice({
-  // name: 'Cart',
-  // initialState: {
-  //   productsArray: [],
-  //   isLoading: false,
-  //   error: false
-  // },
-  // reducers: {},
-  // extraReducers: (builder) => {
-  //   builder
-  //   .addCase(GetProducts.pending, (state) => {
-  //     state.isLoading = true;
-  //     state.error = false
-  //       })
-  //       .addCase(GetProducts.fulfilled, (state, action) => {
-  //         state.isLoading = false;
-  //         state.error = true
-  //     state.GetProducts = action.payload
-  //     console.log('action.payload=>>',action.payload)
-  //       })
-  //       .addCase(GetProducts.rejected, (state, action) => {
-  //         state.isLoading = false;
-  //         state.error = action.error.message
-  //       })
-  // }
   name: "Cart",
   initialState:loadCartFromLocalStorage(),
   reducers: {

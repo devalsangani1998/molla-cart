@@ -43,7 +43,7 @@ transition:Slide,
             {
               products.map((item) => {
                 return (
-                  <div className='col-md-6 col-lg-3 col-xl-5col col-sm-12 mb-4 shadow-md'>
+                  <div className='col-md-6 col-lg-3 col-xl-5col col-sm-12 mb-4 shadow-sm'>
                     <div className="card border-0" style={{height:'90vh'}}>
                       <div className="product-img" style={{objectFit:'contain'}} >
                         <img src={item.img} className="card-img-top bg-white" alt="..." style={{objectFit:'contain',height:'50vh', width:'100%'}} />
