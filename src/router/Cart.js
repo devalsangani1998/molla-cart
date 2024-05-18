@@ -9,13 +9,12 @@ import { Slide, ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useState } from 'react';
 
-
-
 const Cart = () => {
 
     const dispatch = useDispatch()
 
     const { cart, total } = useSelector(state => state.cart)
+    const [shippingCost, setShippingCost] = useState(0)
 
     function remove(val) {
         toast.success('Product Removed From Cart',{
@@ -26,8 +25,13 @@ const Cart = () => {
         dispatch(removeCart(val))
     }
 
-  
+    const handleShippingCharge = (e) => {
+setShippingCost(parseFloat(e.target.value))
+    }
 
+    const calculateTotal = () => {
+        return total + shippingCost;
+    }
 
     return (
         <>
@@ -108,7 +112,7 @@ const Cart = () => {
                                                 <tr className='summary-shipping-row'>
                                                     <td>
                                                         <div className="custom-control custom-radio">
-                                                            <input type="radio" name='cart' className='custom-control-input' value='free-shipping' />
+                                                            <input type="radio" name='cart' className='custom-control-input' value='0' checked={shippingCost == 0} onChange={handleShippingCharge} />
                                                             <label className='custom-control-label'>
                                                                 Free Shipping
                                                             </label>
@@ -120,7 +124,7 @@ const Cart = () => {
                                                 <tr className='summary-shipping-row'>
                                                     <td>
                                                         <div className="custom-control custom-radio">
-                                                            <input type="radio" name='cart' className='custom-control-input' value='standard-shipping' />
+                                                            <input type="radio" name='cart' className='custom-control-input' value='10' checked={shippingCost == 10} onChange={handleShippingCharge} />
                                                             <label htmlFor="standard-shipping" className='custom-control-label'>
                                                                 Standard:
                                                             </label>
@@ -131,7 +135,7 @@ const Cart = () => {
                                                 <tr className='summary-shipping-row'>
                                                     <td>
                                                         <div className='custom-control custom-radio'>
-                                                            <input type="radio" name='cart' className='custom-control-input' value='express-shipping' />
+                                                            <input type="radio" name='cart' className='custom-control-input' value='20' checked={shippingCost == 20} onChange={handleShippingCharge} />
                                                             <label htmlFor="express-shipping" className='custom-control-label'>
                                                                 Express:
                                                             </label>
@@ -149,7 +153,7 @@ const Cart = () => {
                                                     <td>
                                                         Total:
                                                     </td>
-                                                    <td>${total}</td>
+                                                    <td>${calculateTotal()}</td>
                                                 </tr>
                                             </tbody>
                                         </table>

@@ -6,15 +6,12 @@ import Navbar from 'react-bootstrap/Navbar';
 import { BsCart2 } from "react-icons/bs";
 import { Link } from 'react-router-dom';
 
-
-
 function Header() {
   return (
     <>
-   
-    <Navbar bg="white" expand="lg" className='sticky-top shadow-sm py-3' >
+    <Navbar bg="white" expand="lg" className='sticky-top shadow-sm py-3' style={{zIndex:1000}} >
       <Container fluid>
-        <Navbar.Brand to="#"><img src={require('./../components/assets/logo.png')} alt="" /></Navbar.Brand>
+        <Navbar.Brand to="#"><a href="/"><img src={require('./../components/assets/logo.png')} alt="" /></a></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -24,9 +21,6 @@ function Header() {
           >
             <Nav.Link to="/home">
               <Link className='nav px-3' to='/home'>HOME</Link></Nav.Link>
-            {/* <Nav.Link to="/shop"> */}
-              {/* <Link className='nav' to = '/shop'>Shop </Link> </Nav.Link> */}
-
             <Nav.Link to="/product">
              <Link className='nav px-3' to = '/product'> PRODUCT </Link>
             </Nav.Link>
@@ -41,7 +35,6 @@ function Header() {
             </Nav.Link>
           </Nav>
           <Form className="d-flex">
-
             <Form.Control
               type="search"
               placeholder="Search Product.."
@@ -62,8 +55,6 @@ function Header() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
-   
-    
     </>
   );
 }
