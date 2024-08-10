@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { addToCart } from '../redux/CartSlice'
 import './Product.css'
@@ -6,12 +6,32 @@ import { FiHeart } from 'react-icons/fi';
 import { GrOverview } from 'react-icons/gr';
 import { Slide, ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { fetchProducts } from './../redux/productsSlice';
 
 const Product = () => {
 
   const dispatch = useDispatch()
 
   const { products } = useSelector(state => state.products)
+
+  const productsAll = useSelector((state) => state.products.items);
+  const productStatus = useSelector((state) => state.products.status);
+  const error = useSelector((state) => state.products.error);
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const toggleExpansion = () => {
+      setIsExpanded(!isExpanded);
+  };
+
+
+
+  useEffect(() => {
+    dispatch(fetchProducts());
+  },[])
+
+  useEffect(() => {
+console.log('productsAll',productsAll)
+  },[productsAll])
 
   function add(val) {
     toast.success('Product Added to Cart',{
@@ -41,19 +61,19 @@ transition:Slide,
         <div className="item">
           <div className="row justify-content-center">
             {
-              products.map((item) => {
+              productsAll?.map((item) => {
                 return (
                   <div className='col-md-6 col-lg-3 col-xl-5col col-sm-12 mb-4 shadow-sm'>
                     <div className="card border-0" style={{height:'90vh'}}>
                       <div className="product-img" style={{objectFit:'contain'}} >
-                        <img src={item.img} className="card-img-top bg-white" alt="..." style={{objectFit:'contain',height:'50vh', width:'100%'}} />
+                        <img src={item.image} className="card-img-top bg-white" alt="..." style={{objectFit:'contain',height:'50vh', width:'100%'}} />
                       </div>
                       <div className=" container card-img-overlay like gap-2 justify-content-between d-flex flex-row-reverse">
                         <div className="wishlist rounded-circle">
                           <FiHeart />
                         </div>
                         <div className="right">
-                          <a className='text-white' href=''>add to wishlist</a>
+                          <a className='text-white text-center' href=''>add to wishlist</a>
                         </div>
                         <div className="quick rounded-circle">
                         <GrOverview />
@@ -63,7 +83,7 @@ transition:Slide,
                       <div className="overlay mt-2" style={{ textAlign: 'center' }}>
                         <div className="card-body" style={{ textAlign: "center" }}>
                           <p className="card-title ">{item.category}</p>
-                          <a className="card-text text-decoration-none text-dark">{item.name}</a>
+                          <a className="card-text text-decoration-none text-dark">{item.title}</a>
                           <p className='mt-2' style={{ color: '#cc6666', textAlign: 'center' }}>${item.price}</p>
                           <button className='border-0 add-btn' onClick={() => add(item)}>ADD-TO CART</button>
                         </div>

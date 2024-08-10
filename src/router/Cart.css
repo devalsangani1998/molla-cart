@@ -10,7 +10,8 @@
     z-index: 1;
 }
 .remove-btn{
-    padding: 6px !important;
+    /* padding: 6px !important; */
+    margin-left: 35px;
     border-radius: 5px;
     line-height: 0px;
     background-color: #cc6666 !important;
