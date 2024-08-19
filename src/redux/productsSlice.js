@@ -21,21 +21,24 @@ const productsSlice = createSlice({
     initialState: {
         items: [],
         status: 'idle',
+        isLoading: false,
         error: null,
       },
     reducers: {},
     extraReducers: (builder) => {
         builder
           .addCase(fetchProducts.pending, (state) => {
-            state.status = 'loading';
+            state.isLoading = true;
           })
           .addCase(fetchProducts.fulfilled, (state, action) => {
             state.status = 'succeeded';
             state.items = action.payload;
+            state.isLoading = false
             console.log('action.payload',action.payload)
           })
           .addCase(fetchProducts.rejected, (state, action) => {
             state.status = 'failed';
+            state.isLoading = false;
             state.error = action.error.message;
           });
       },
