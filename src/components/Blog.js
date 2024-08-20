@@ -1,6 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const Blog = () => {
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Smooth scroll to the top
+    });
+  }, []);
+
   return (
     <div className='container-fluid mt-4 justify-content-center'>
 <h2 className='heading heading-center mt-4 pt-5 pb-3'>From Our Blog</h2>

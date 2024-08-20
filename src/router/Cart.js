@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./Cart.css"
 import { useDispatch, useSelector } from 'react-redux'
 import { removeCart } from '../redux/CartSlice'
@@ -16,6 +16,13 @@ const Cart = () => {
 
     const { cart, total } = useSelector(state => state.cart)
     const [shippingCost, setShippingCost] = useState(0)
+
+    useEffect(() => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth' // Smooth scroll to the top
+        });
+      }, []);
 
     function remove(val) {
         toast.success('Product Removed From Cart', {

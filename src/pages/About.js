@@ -1,7 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./../components/contact.css"
 
 const About = () => {
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Smooth scroll to the top
+    });
+  }, []);
+
   return (
   <>
   <div className="container mt-3">

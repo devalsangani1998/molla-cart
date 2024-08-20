@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 function Header() {
   return (
     <>
-      <Navbar bg="white" expand="lg" className='sticky-top shadow-sm py-3' style={{ zIndex: 1000 }} >
+      <Navbar bg="white" expand="lg" className='sticky-top shadow-sm py-3' style={{ zIndex: 1020 }} >
         <Container fluid>
           <Navbar.Brand to="#"><a href="/"><img src={require('./../components/assets/logo.png')} alt="" /></a></Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll"/>

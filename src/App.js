@@ -7,14 +7,7 @@ import Footer from './pages/Footer'
 const App = () => {
   return (
     <>
-    
     <MainPage/>
-    {/* <Costumer/> */}
-    {/* <Footer/> */}
-{/*     
-    <Product/>
-    <NewProduct/>
-    <Blog/> */}
     <Footer/>
       </>
   )

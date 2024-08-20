@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Home.css'
 // import { hover } from '@testing-library/user-event/dist/hover'
 import { Link } from 'react-router-dom'
 
 
 const HomeBanner = () => {
+
+    useEffect(() => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth' // Smooth scroll to the top
+        });
+      }, []);
+
     return (
         <div className='container-fluid pt-1 home-banner'>
             <div className="row justify-content-center">

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "./contact.css"
 import { CiLocationOn } from "react-icons/ci";
 import { IoIosCall } from "react-icons/io";
@@ -9,8 +9,15 @@ import { BsArrowRight } from "react-icons/bs";
 
 
 const Contact = () => {
-  return (
 
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Smooth scroll to the top
+    });
+  }, []);
+
+  return (
     <>
       <div className="container mt-3">
         <div className="page-header page-header-big">

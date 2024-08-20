@@ -7,7 +7,6 @@ import { GrOverview } from 'react-icons/gr';
 import { Slide, ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { fetchProducts } from './../redux/productsSlice';
-import { ProgressBar } from 'react-bootstrap';
 
 const Product = () => {
 
@@ -50,7 +49,12 @@ const Product = () => {
     setIsExpanded(!isExpanded);
   };
 
-
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Smooth scroll to the top
+    });
+  }, []);
 
   // useEffect(() => {
   //   dispatch(fetchProducts());
@@ -87,10 +91,17 @@ const Product = () => {
     <>
       {
         isLoading || progress < 100 ?
-          <div class="text-center mb-5 mt-5">
-           <div className="progress-container">
-          <ProgressBar animated now={100} variant="danger" label={`${progress}%`} />
-        </div>
+            <div className="text-center mb-5 mt-5">
+            <div className="spinner-container d-flex justify-content-center align-items-center">
+              <div className="position-relative d-inline-flex">
+                <div className="spinner-border text-danger" role="status" style={{ width: '4rem', height: '4rem' }}>
+                  <span className="visually-hidden">Loading...</span>
+                </div>
+                <div className="position-absolute top-50 start-50 translate-middle" style={{ fontSize: '1rem', color: '#cc6666' }}>
+                  {progress}%
+                </div>
+              </div>
+            </div>
           </div> :
           <div className="container-fluid bg-second mb-3 product">
             <div className='heading heading-center mb-3'>
